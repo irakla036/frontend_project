@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NEXT — Final Project</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+   <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Cookie consent (localStorage) -->
+  <div class="cookie" id="cookie">
+    <p>ჩვენ ვიყენებთ ქუქი-ს საიტის გამოცდილების გაუმჯობესებისთვის. ეთანხმებით?</p>
+    <div class="cookie__actions">
+      <button id="accept-cookie" class="btn">Accept</button>
+      <button id="decline-cookie" class="btn btn--ghost">Decline</button>
+    </div>
+  </div>
+
+  <!-- Header / Navbar (semantic) -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar__container">
+        <a href="#hero" id="navbar__logo" class="navbar__brand"><i class="fa fa-gem"></i> NEXT</a>
+
+        <!-- Hamburger -->
+        <button class="navbar__toggle" id="mobile-menu" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+        </button>
+
+        <ul class="navbar__menu" id="navbar__menu">
+          <li class="navbar__item"><a href="#hero" class="navbar__links">Home</a></li>
+          <li class="navbar__item"><a href="#services" class="navbar__links">Services</a></li>
+          <li class="navbar__item"><a href="#products" class="navbar__links">Products</a></li>
+          <li class="navbar__item"><a href="#signup" class="navbar__links">Sign Up</a></li>
+          <li class="navbar__btn"><a href="#contact" class="button">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN content -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-label="Hero section">
+      <div class="hero__container">
+        <div class="hero__content">
+          <h1>NEXT GENERATION</h1>
+          <h2>TECHNOLOGY</h2>
+          <p>Innovative solutions, tailored for modern problems.</p>
+          <a class="main__btn" href="#signup">Get Started</a>
+        </div>
+        <div class="hero__media" aria-hidden="true">
+          <img src="images/pic1.svg" alt="Hero illustration" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services" aria-label="Services">
+      <h2>See what the hype is about</h2>
+      <div class="services__container">
+        <article class="services__card">
+          <h3>Experience Bliss</h3>
+          <p>AI Powered TECHNOLOGY</p>
+          <button class="btn">GET Started</button>
+        </article>
+
+        <article class="services__card">
+          <h3>Are You Ready?</h3>
+          <p>Take the leap</p>
+          <button class="btn">GET Started</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS (fetch demo) -->
+    <section class="products" id="products" aria-label="Products / Data from server">
+      <h2>Our Users (fetched via API)</h2>
+      <p class="muted">This demonstrates GET (fetch) from a remote server.</p>
+      <div id="users-list" class="users-list">
+        <!-- fetched users will appear here -->
+      </div>
+    </section>
+
+    <!-- SIGN UP / JS validation -->
+    <section class="signup" id="signup" aria-label="Sign up">
+      <h2>Create your account</h2>
+      <form id="signup-form" novalidate>
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required minlength="2" placeholder="Irakli Samkharadze" />
+          <small class="error" id="name-error"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="IrakliSamkharadze@.com" />
+          <small class="error" id="email-error"></small>
+        </div>
+
+        <div class="form-row form-row--password">
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input id="password" name="password" type="password" required minlength="8" placeholder="At least 8 chars, one number" />
+            <button type="button" id="toggle-password" class="icon-btn" aria-label="Show password"><i class="fa fa-eye"></i></button>
+          </div>
+          <small class="error" id="password-error"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="confirm">Confirm password</label>
+          <input id="confirm" name="confirm" type="password" required placeholder="Repeat password" />
+          <small class="error" id="confirm-error"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="terms" class="checkbox">
+            <input id="terms" name="terms" type="checkbox" required /> I agree to the terms
+          </label>
+          <small class="error" id="terms-error"></small>
+        </div>
+
+        <div class="form-row">
+          <button type="submit" class="button">Sign up</button>
+        </div>
+
+        <div id="form-success" class="form-success" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-label="Contact">
+      <h2>Contact</h2>
+      <p>Questions? Email us at <a href="mailto:hello@next.example">hello@next.example</a></p>
+    </section>
+
+  </main>
+
+  <!-- scroll to top -->
+  <button id="scrollTop" class="scroll-top" title="Scroll to top" aria-label="Scroll to top"><i class="fa fa-arrow-up"></i></button>
+
+  <!-- Footer -->
+  <footer class="footer__container" role="contentinfo">
+    <div class="footer__links">
+      <div class="footer__links--wrapper">
+        <div class="footer__links--items">
+          <h3>About</h3>
+          <a href="#">How it works</a>
+          <a href="#">Testimonials</a>
+          <a href="#">Careers</a>
+        </div>
+
+        <div class="footer__links--items">
+          <h3>Contact</h3>
+          <a href="#">Contact</a>
+          <a href="#">Support</a>
+          <a href="#">Destinations</a>
+        </div>
+
+        <div class="footer__links--items">
+          <h3>Social</h3>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="social__media">
+      <div class="social__media--wrap">
+        <div class="footer__logo"><a href="#hero" id="footer__logo"><i class="fa fa-gem"></i> NEXT</a></div>
+        <p class="website__right">NEXT © <span id="year"></span>. All rights reserved.</p>
+        <div class="social__icons">
+          <a href="#" class="social__icon--link" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social__icon--link" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social__icon--link" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+</body>
+</html>
