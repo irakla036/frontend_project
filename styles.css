@@ -21,10 +21,6 @@ body {
     padding: 0 20px;
 }
 
-/* -------------------------
-   BUTTONS (Unified, upgraded)
-   ------------------------- */
-
 /* Color tokens */
 :root {
   --btn-grad-1: #ff0844;
@@ -55,7 +51,7 @@ body {
     text-decoration: none;
     color: var(--btn-text);
 
-    /* animated gradient background  */
+    /* animated background  */
     background: linear-gradient(120deg, var(--btn-grad-1) 0%, var(--btn-grad-2) 100%);
     background-size: 240% 240%;
     transition:
@@ -66,7 +62,7 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Slightly smaller navbar variant (keeps same look) */
+/* smaller navbar variant */
 .navbar__btn .button {
     padding: 8px 14px;
 }
@@ -98,7 +94,7 @@ body {
     box-shadow: 0 14px 36px rgba(255,140,120,0.18);
 }
 
-/* Ghost variant keeps transparent fill but still gets hover effects */
+/* Ghost variant hover effects */
 .btn--ghost {
     background: transparent;
     border: 1px solid rgba(255,255,255,0.10);
@@ -112,7 +108,7 @@ body {
     box-shadow: 0 12px 32px rgba(255,255,255,0.04);
 }
 
-/* Sliding shine — pseudo element that glides across on hover */
+/* Sliding shine glides across on hover */
 .button::before,
 .btn::before,
 .navbar__btn .button::before {
@@ -129,7 +125,7 @@ body {
     pointer-events: none;
 }
 
-/* Show sliding shine on hover */
+/*sliding shine on hover */
 .button:hover::before,
 .btn:hover::before,
 .navbar__btn .button:hover::before {
@@ -137,7 +133,7 @@ body {
     opacity: 1;
 }
 
-/* Soft neon outline using a second pseudo-element (glow ring) */
+/* Soft neon outline   second pseudo-element */
 .button::after,
 .btn::after,
 .navbar__btn .button::after {
@@ -151,7 +147,7 @@ body {
     pointer-events: none;
 }
 
-/* reveal glow outline on hover */
+/*glow outline on hover */
 .button:hover::after,
 .btn:hover::after,
 .navbar__btn .button:hover::after {
@@ -171,7 +167,7 @@ body {
   100%  { transform: translateY(0) scale(1); }
 }
 
-/* Small size modifier */
+/* Small size modification */
 .button--sm,
 .btn--sm {
   padding: 8px 14px;
@@ -179,7 +175,7 @@ body {
   border-radius: 10px;
 }
 
-/* Large size modifier */
+/* Large size modificator */
 .button--lg,
 .btn--lg {
   padding: 16px 36px;
@@ -196,7 +192,7 @@ body {
   box-shadow: none;
 }
 
-/* Respect user's reduced motion preference */
+/*user's reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .button,
   .btn,
@@ -401,7 +397,7 @@ body {
 }
 
 /* -------------------------
-   PRODUCTS (fetch)
+   PRODUCTS
    ------------------------- */
 .products {
     padding: 40px 20px;
