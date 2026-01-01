@@ -1,11 +1,11 @@
-// ---------- NAVBAR (burger) ----------
+// ---------- NAVBAR (burger) 
 const menuBtn = document.getElementById('mobile-menu');
 const navbarMenu = document.getElementById('navbar__menu');
 
 menuBtn.addEventListener('click', () => {
   const expanded = menuBtn.getAttribute('aria-expanded') === 'true' || false;
   menuBtn.setAttribute('aria-expanded', !expanded);
-  menuBtn.classList.toggle('open');         // toggles bars transforms via CSS
+  menuBtn.classList.toggle('open');         
   navbarMenu.classList.toggle('active');
   // show/hide menu for small screens
   if (navbarMenu.classList.contains('active')) {
@@ -36,7 +36,7 @@ document.querySelectorAll('.navbar__links').forEach(link => {
   });
 });
 
-// ---------- HEADER BG CHANGE ON SCROLL ----------
+// ---------- HEADER BG CHANGE ON SCROLL 
 const header = document.getElementById('site-header');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 10) {
@@ -53,13 +53,13 @@ window.addEventListener('scroll', () => {
   else scrollBtn.style.display = 'none';
 });
 
-// ---------- SCROLL TO TOP ----------
+// ---------- SCROLL TO TOP 
 const scrollTopBtn = document.getElementById('scrollTop');
 scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ---------- FETCH (GET) example ----------
+// ---------- FETCH (GET) example 
 async function loadUsers() {
   try {
     const res = await fetch('https://jsonplaceholder.typicode.com/users'); // GET demo
@@ -86,7 +86,7 @@ function escapeHtml(text) {
   });
 }
 
-// ---------- FORM VALIDATION ----------
+// ---------- FORM VALIDATION 
 const form = document.getElementById('signup-form');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
@@ -147,7 +147,7 @@ form.addEventListener('submit', (e) => {
 
   if (ok) {
     success.textContent = 'Registration successful (demo). Data not sent to server in this example.';
-    // Optionally store user data (without password) in localStorage as demo
+    // Optionally store user data (no password)
     const demoUser = { name: nameInput.value.trim(), email: emailInput.value.trim(), date: new Date().toISOString() };
     const users = JSON.parse(localStorage.getItem('demo_users') || '[]');
     users.push(demoUser);
@@ -165,7 +165,7 @@ togglePwdBtn.addEventListener('click', () => {
   togglePwdBtn.innerHTML = type === 'text' ? '<i class="fa fa-eye-slash"></i>' : '<i class="fa fa-eye"></i>';
 });
 
-// ---------- COOKIE consent (localStorage) ----------
+// ---------- COOKIE consent (localStorage)
 const cookieEl = document.getElementById('cookie');
 const acceptBtn = document.getElementById('accept-cookie');
 const declineBtn = document.getElementById('decline-cookie');
